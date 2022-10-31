@@ -3,7 +3,7 @@ import { Grid } from '@mui/material';
 import styles from '../../stylesheets/questionCard.module.css';
 import ProgressBar from '../helper/ProgressBar';
 
-const Categories = () => {
+const Categories = ({ currQuestion }) => {
 	return (
 		<Grid
 			container
@@ -14,7 +14,10 @@ const Categories = () => {
 			className={styles.categories__container}
 		>
 			<Grid item xs={3} className={styles.categories__section}>
-				<ProgressBar variant='determinate' value={50} />
+				<ProgressBar
+					variant='determinate'
+					value={(100 / 6) * (currQuestion + 1) * 4}
+				/>
 				Idealistic
 			</Grid>
 			<Grid item xs={3} className={styles.categories__section}>

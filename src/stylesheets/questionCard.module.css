@@ -7,10 +7,8 @@
 }
 
 .categories__container,
-.question__container {
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
+.question__container,
+.answer__container {
     font-size: 21px;
     font-weight: 400;
 }
@@ -19,17 +17,10 @@
 .question__section {
     color: #343333;
     font-family: lato, sans-serif;
-    width: 100%;
 }
 
 .categories__section {
     text-transform: uppercase;
-}
-
-.question__section {
-    display: flex;
-    flex-direction: column;
-    row-gap: 2rem;
 }
 
 .question__progress {
