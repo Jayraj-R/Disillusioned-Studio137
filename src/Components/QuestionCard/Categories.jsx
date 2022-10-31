@@ -7,6 +7,7 @@ const Categories = ({ currQuestion }) => {
 	return (
 		<Grid
 			container
+			item
 			xs={12}
 			px={8}
 			py={6}

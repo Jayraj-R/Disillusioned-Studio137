@@ -5,7 +5,7 @@ import QuestionCardWrapper from './QuestionCard/QuestionCardWrapper';
 
 const Layout = () => {
 	return (
-		<Grid container xs={12} className='container'>
+		<Grid container item xs={12} className='container'>
 			{/* begin : Navbar */}
 			<Grid item xs={12} className='section'>
 				<Navbar />
