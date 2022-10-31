@@ -8,10 +8,5 @@
     margin: 0rem 0rem;
     display: flex;
     justify-content: center;
-    height: 100vh;
     background-color: #8fcbd3;
-}
-
-.section {
-    height: fit-content;
 }

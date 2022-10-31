@@ -1,0 +1,24 @@
+.container {
+    min-height: 80vh;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    position: relative;
+}
+
+.categories__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.categories__section {
+    color: rgb(52, 51, 51);
+    font-weight: 400;
+    font-family: lato, sans-serif;
+    font-size: 21px;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+}
