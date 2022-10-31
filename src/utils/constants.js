@@ -30,11 +30,9 @@ export const questionBank = [
 		answer: '',
 		value: undefined,
 	},
-
 	{
 		id: 6,
-		label:
-			'I’m beginning to believe the journey of service will be much harder than I anticipated.',
+		label: 'I have ambitious aims of making a difference.',
 		answer: '',
 		value: undefined,
 	},

@@ -42,7 +42,7 @@ const QuestionCardWrapper = () => {
 		<Grid container item xs={11} sm={8}>
 			<Paper className={styles.container}>
 				<Grid xs={12} container item>
-					<Categories currQuestion={currQuestion} />
+					<Categories currQuestion={currQuestion} questionBank={questionBank} />
 				</Grid>
 				<Grid xs={12} container item>
 					<Questions currQuestion={currQuestion} questionBank={questions} />
