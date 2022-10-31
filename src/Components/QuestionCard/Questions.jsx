@@ -12,14 +12,21 @@ const Questions = ({ currQuestion, questionBank }) => {
 			spacing={2}
 			className={styles.question__container}
 		>
-			<Grid item xs={12} className={styles.question__section}>
-				<Typography variant='div' className={styles.question__progress}>
+			<Grid
+				container
+				direction='column'
+				justifyContent='space-between'
+				alignItems='center'
+				xs={12}
+				className={styles.question__section}
+			>
+				<Grid variant='div' className={styles.question__progress}>
 					<span style={{ fontWeight: 700 }}>{currQuestion + 1}</span>/
 					{questionBank.length}
-				</Typography>
-				<Typography variant='p' className={styles.question__label}>
+				</Grid>
+				<Grid variant='p' className={styles.question__label}>
 					{questionBank[currQuestion].label}
-				</Typography>
+				</Grid>
 			</Grid>
 		</Grid>
 	);
