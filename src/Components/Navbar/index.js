@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Grid, Paper, Typography } from '@mui/material';
+import { Grid, Typography } from '@mui/material';
 import styles from '../../stylesheets/navbar.module.css';
 
 const Navbar = () => {

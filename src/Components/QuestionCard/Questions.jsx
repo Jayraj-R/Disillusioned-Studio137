@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styles from '../../stylesheets/questionCard.module.css';
-import { Grid, Typography } from '@mui/material';
+import { Grid } from '@mui/material';
 
 const Questions = ({ currQuestion, questionBank }) => {
 	return (
