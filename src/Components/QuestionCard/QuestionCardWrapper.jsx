@@ -1,11 +1,12 @@
 import * as React from 'react';
-import { Grid, Paper } from '@mui/material';
+import { Button, Grid, Paper } from '@mui/material';
 import styles from '../../stylesheets/questionCard.module.css';
 import Categories from './Categories';
 import Questions from './Questions';
 import { questionBank } from '../../utils/constants';
 import Answers from './Answers';
-
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 const QuestionCardWrapper = () => {
 	const [currQuestion, setCurrQuestion] = React.useState(0);
 	const [questions, setQuestions] = React.useState(questionBank);
@@ -24,6 +25,32 @@ const QuestionCardWrapper = () => {
 						questionBank={questions}
 						setQuestions={setQuestions}
 					/>
+				</Grid>
+				<Grid xs={12} px={8} py={6} className={styles.step__container}>
+					<Button
+						variant='text'
+						disabled={currQuestion === 0}
+						onClick={() => setCurrQuestion(currQuestion - 1)}
+						startIcon={<ArrowBackIcon />}
+						style={{
+							color: '#000',
+							fontWeight: '700',
+						}}
+					>
+						Previous
+					</Button>
+					<Button
+						variant='text'
+						disabled={currQuestion === questions.length - 1}
+						onClick={() => setCurrQuestion(currQuestion + 1)}
+						endIcon={<ArrowForwardIcon />}
+						style={{
+							color: '#000',
+							fontWeight: '700',
+						}}
+					>
+						Next
+					</Button>
 				</Grid>
 			</Paper>
 		</Grid>

@@ -27,3 +27,10 @@
     color: #e74b16;
     text-align: center;
 }
+
+.step__container {
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
