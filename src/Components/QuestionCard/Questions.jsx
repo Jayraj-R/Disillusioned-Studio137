@@ -6,6 +6,7 @@ const Questions = ({ currQuestion, questionBank }) => {
 	return (
 		<Grid
 			container
+			item
 			xs={12}
 			px={8}
 			py={6}
@@ -14,6 +15,7 @@ const Questions = ({ currQuestion, questionBank }) => {
 		>
 			<Grid
 				container
+				item
 				direction='column'
 				justifyContent='space-between'
 				alignItems='center'
@@ -21,11 +23,11 @@ const Questions = ({ currQuestion, questionBank }) => {
 				className={styles.question__section}
 			>
 				<Grid variant='div' className={styles.question__progress}>
-					<span style={{ fontWeight: 700 }}>{currQuestion + 1}</span>/
+					<span style={{ fontWeight: 700 }}>{currQuestion.id}</span>/
 					{questionBank.length}
 				</Grid>
 				<Grid variant='p' className={styles.question__label}>
-					{questionBank[currQuestion].label}
+					{currQuestion.label}
 				</Grid>
 			</Grid>
 		</Grid>

@@ -3,38 +3,42 @@ import { Grid } from '@mui/material';
 import styles from '../../stylesheets/questionCard.module.css';
 import AnswerSlider from '../helper/Slider';
 
-const Answers = () => {
-	const marks = [
-		{
-			value: 0,
-			label: 'Strongly Disagree',
-		},
-		{
-			value: 25,
-			label: 'Disagree',
-		},
-		{
-			value: 50,
-			label: 'Neutral',
-		},
-		{
-			value: 75,
-			label: 'Agree',
-		},
-
-		{
-			value: 100,
-			label: 'Strongly Agree',
-		},
-	];
+const Answers = ({
+	currQuestion,
+	questions,
+	setQuestions,
+	value,
+	setValue,
+	marks,
+}) => {
+	const handleSliderChange = (event, newValue) => {
+		if (newValue !== undefined) {
+			setValue(newValue);
+			let temp = [...questions];
+			temp[currQuestion.id - 1] = {
+				...currQuestion,
+				answer: marks[newValue / 25].label,
+				value: newValue,
+			};
+			setQuestions(temp);
+		}
+	};
 
 	return (
-		<Grid container xs={12} px={15} py={6} className={styles.answer__container}>
+		<Grid
+			container
+			item
+			xs={12}
+			px={15}
+			py={6}
+			className={styles.answer__container}
+		>
 			<AnswerSlider
 				aria-label='answer slider'
-				defaultValue={0}
+				value={value ? value : 0}
 				step={25}
 				marks={marks}
+				onChange={handleSliderChange}
 			/>
 		</Grid>
 	);
